@@ -1,0 +1,13 @@
+
+{% block content %}
+<div>
+ --><form method="post">
+{% csrf_token %}
+{{ newform}}
+<br><button type="submit" class="btn btn-primary">Submit</button></form>
+<br>
+{% if error_message %}
+  <p class="alert alert-primary" role="alert">{{error_message}}</p>
+  {% endif %}
+</div>
+{%endblock %}

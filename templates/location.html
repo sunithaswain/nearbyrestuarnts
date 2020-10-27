@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hostza</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1 overlay2">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-9">
+                        <div class="slider_text text-center">
+                            <h3>Location details</h3>
+                        </div>
+                    </div>
+                    <div class="find_dowmain" id="selData">
+                      <form action="#" class="find_dowmain_form">
+                        <table border="5">
+                          <thread>                       
+                            <th>locationname</th>
+                            <th>Address</th>
+                            <th>Pinnumber</th>
+                            <th>State</th>
+                            <th>RestuarntName</th>
+                          </thread>
+                          {%for i in form%}
+                          <tr>
+                          <td id="{{i.address}}">{{i.address}}</td>
+                          <td id="{{i.state}}">{{i.state}}</td>
+                          <td id="{{i.pincode}}">{{i.pincode}}</td>
+                          <td id="{{i.state}}">{{i.state}}</td>
+                          {%endfor%}
+                          {%for j in form1%}
+                          <td> <a href='/app/ind/{{j.id}}'>{{j.Resturantname}}</a></td>
+                          {%endfor%}
+                        </table>
+                      </form>
+                                
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!--contact js-->
+    <script src="{{ STATIC_URL }}js/jquery-3.2.1.min.js"></script>
+</body>
+
+</html>
